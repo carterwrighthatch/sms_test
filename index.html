@@ -12,7 +12,7 @@
     <h2>Hatch Stamping Company LLC</h2>
     <h3>SMS Consent Form</h3>
 
-    <form action="#" method="post" style="text-align: left;">
+    <form action="https://formspree.io/f/xrblyyvb" method="POST" style="text-align: left;">
         <label for="fullName">Full Name:</label><br>
         <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 8px;"><br><br>
 
@@ -23,6 +23,15 @@
         <label for="consent">
             I agree to receive automated SMS alerts regarding machine status, robot faults, and maintenance downtime from Hatch Stamping Company LLC. I understand I can reply STOP at any time to opt out.
         </label><br><br>
+
+        <!-- Honeypot anti-spam field -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Disable CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Redirect after submission -->
+        <input type="hidden" name="_next" value="https://sms.hatchstamping.com/thanks.html">
 
         <button type="submit" style="padding: 10px 20px;">Submit</button>
     </form>
