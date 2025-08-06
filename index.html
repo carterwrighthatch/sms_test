@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent Form - Hatch Stamping Company</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMS Consent Form - Hatch Stamping Company</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1C2A5C;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 250px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #223B7B;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #EF7C00;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    button {
+      background-color: #F28C28;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e67c12;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: gray;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color: #223B7B;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; text-align: center;">
+<body>
 
-    <img src="hatch_logo.png" alt="Hatch Stamping Company Logo" style="max-width: 300px; margin-bottom: 20px;">
+  <header>
+    <img src="hatch_logo.png" alt="Hatch Stamping Company Logo" />
+  </header>
 
+  <div class="form-container">
     <h2>Hatch Stamping Company LLC</h2>
     <h3>SMS Consent Form</h3>
 
-    <form action="https://formspree.io/f/xrblyyvb" method="POST" style="text-align: left;">
-        <label for="fullName">Full Name:</label><br>
-        <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 8px;"><br><br>
+    <form action="https://formspree.io/f/xrblyyvb" method="POST">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
 
-        <label for="phone">Mobile Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g., 5551234567" style="width: 100%; padding: 8px;"><br><br>
+      <label for="phone">Mobile Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g., 5551234567" />
 
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">
-            I agree to receive automated SMS alerts regarding machine status, robot faults, and maintenance downtime from Hatch Stamping Company LLC. I understand I can reply STOP at any time to opt out.
-        </label><br><br>
+      <label>
+        <input type="checkbox" id="consent" name="consent" required />
+        I agree to receive automated SMS alerts regarding machine status, robot faults, and maintenance downtime from Hatch Stamping Company LLC. I understand I can reply STOP at any time to opt out.
+      </label>
 
-        <!-- Honeypot anti-spam field -->
-        <input type="text" name="_honey" style="display:none">
+      <!-- Honeypot anti-spam field -->
+      <input type="text" name="_honey" style="display:none" />
 
-        <!-- Disable CAPTCHA -->
-        <input type="hidden" name="_captcha" value="false">
+      <!-- Disable CAPTCHA -->
+      <input type="hidden" name="_captcha" value="false" />
 
-        <!-- Redirect after submission -->
-        <input type="hidden" name="_next" value="https://sms.hatchstamping.com/thanks.html">
+      <!-- Redirect after submission -->
+      <input type="hidden" name="_next" value="https://sms.hatchstamping.com/thanks.html" />
 
-        <button type="submit" style="padding: 10px 20px;">Submit</button>
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit">Submit</button>
+      </div>
     </form>
 
-    <p style="font-size: 0.9em; color: gray; margin-top: 20px;">
-        We respect your privacy. Your information will not be shared or sold. View our 
-        <a href="privacy.html" target="_blank">Privacy Policy</a>.
-    </p>
+    <div class="footer">
+      We respect your privacy. Your information will not be shared or sold. View our 
+      <a href="privacy.html" target="_blank">Privacy Policy</a>.
+    </div>
+  </div>
+
 </body>
 </html>
+
 
