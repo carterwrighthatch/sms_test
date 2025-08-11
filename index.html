@@ -19,6 +19,7 @@
 
     header img {
       max-width: 250px;
+      alt: "Hatch Stamping Company Logo"; /* Added alt for accessibility */
     }
 
     .form-container {
@@ -54,6 +55,11 @@
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      box-sizing: border-box; /* Ensures padding doesn't mess with the width */
+    }
+
+    input[type="tel"] {
+      inputmode: "tel"; /* Improves phone number input on mobile */
     }
 
     input[type="checkbox"] {
@@ -68,6 +74,7 @@
       font-size: 16px;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%; /* Makes button full width */
     }
 
     button:hover {
@@ -82,8 +89,12 @@
     }
 
     .footer a {
-      color: #223B7B;
+      color: #EF7C00; /* Match footer links to button color */
       text-decoration: underline;
+    }
+
+    .footer a:hover {
+      color: #223B7B; /* Add hover effect for footer links */
     }
   </style>
 </head>
@@ -99,13 +110,13 @@
 
     <form action="https://formspree.io/f/xrblyyvb" method="POST">
       <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required />
+      <input type="text" id="fullName" name="fullName" required aria-label="Full Name" />
 
       <label for="phone">Mobile Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g., 5551234567" />
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g., 5551234567" aria-label="Mobile Phone Number" />
 
       <label>
-        <input type="checkbox" id="consent" name="consent" required />
+        <input type="checkbox" id="consent" name="consent" required aria-label="Consent to receive SMS alerts" />
         I agree to receive automated SMS alerts regarding machine status, robot faults, and maintenance downtime from Hatch Stamping Company LLC. I understand I can reply STOP at any time to opt out.
       </label>
 
@@ -131,5 +142,6 @@
 
 </body>
 </html>
+
 
 
